@@ -1,0 +1,4 @@
+stow iterm2
+stow wezterm
+stow tmux
+stow nvim
