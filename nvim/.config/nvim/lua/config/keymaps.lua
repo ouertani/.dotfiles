@@ -56,3 +56,5 @@ end)
 keymap.set("n", "<leader>i", function()
   require("craftzdog.lsp").toggleInlayHints()
 end)
+
+keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
