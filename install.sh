@@ -27,4 +27,4 @@ brew install --cask arc \
   rectangle \
   sublime-text \
   visual-studio-code \
-  bitwarden \
+  bitwarden \\
