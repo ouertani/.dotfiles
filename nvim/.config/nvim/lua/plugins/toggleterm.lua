@@ -11,7 +11,7 @@ return {
           direction = "float",
           float_opts = {
             border = "double",
-            winblend = 20, -- Adjust this value to increase transparency (0-100)
+            winblend = 0, -- Adjust this value to increase transparency (0-100)
             title_pos = "center",
           },
           keymap.set("n", "<escape>", [[<C-\><C-n>]], opts),
