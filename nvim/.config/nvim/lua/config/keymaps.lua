@@ -58,3 +58,6 @@ keymap.set("n", "<leader>i", function()
 end)
 
 keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+keymap.set("n", "<Leader>p", '"_dp', opts)
+keymap.set("v", "<Leader>p", '"_dp', opts)
