@@ -516,6 +516,16 @@ return {
       -- vim.cmd.colorscheme("yugen")
     end,
   },
+  {
+    "sainnhe/edge",
+    name = "edge",
+    config = function()
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
+      vim.g.edge_enable_italic = true
+      vim.cmd.colorscheme("edge")
+    end,
+  },
   -- lua/plugins/rose-pine.lua
   {
     "rose-pine/neovim",
@@ -600,7 +610,7 @@ return {
       })
 
       -- vim.cmd("colorscheme rose-pine-main")
-      vim.cmd("colorscheme rose-pine-moon")
+      vim.cmd("colorscheme edge")
       -- vim.cmd("colorscheme rose-pine-dawn")
     end,
   },
