@@ -17,7 +17,13 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
   callback = function()
     vim.defer_fn(function()
       vim.cmd("silent! wall")
-    end, 4000) -- 1000 ms (1 second) delay
+    end, 60000) -- 1000 ms (1 second) delay
   end,
   nested = true,
+})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "rust",
+  callback = function()
+    vim.wo.conceallevel = 0 -- Disable conceal for Rust files
+  end,
 })
