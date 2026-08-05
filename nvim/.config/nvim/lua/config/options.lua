@@ -1,3 +1,3 @@
-vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
-vim.opt.guicursor = "i:hor90"
-vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
