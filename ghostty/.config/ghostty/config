@@ -1,31 +1,35 @@
 # ==========================================
-# Theme
+# Theme & Color Setup
 # ==========================================
 theme = Gruvbox Dark
 
 # ==========================================
-# Font & Sharpness (Dell 49" 1440p)
+# Font & Sharpness (1440p Calibration)
 # ==========================================
 font-family = "JetBrains Mono"
-font-size = 18
+font-size = 20
+font-style = "Medium"
 
-# macOS CoreText stroke weight tuning
-font-thicken = true
-font-thicken-strength = 90
+# Enables CoreText stem darkening so thin vertical strokes don't drop pixels
+font-thicken = false
 
-# Physical pixel cell padding (prevents compressed rows)
-adjust-cell-height = 4
+# Font Features (OpenType ligatures)
+font-feature = calt
+font-feature = liga
+font-feature = dlig
+
+# Grid Alignment (Matches VS Code line rhythm)
+adjust-cell-height = 10%
+adjust-cell-width = 0
 
 # ==========================================
 # Window & Layout
 # ==========================================
 window-decoration = false
-title = " "
 
 window-padding-x = 24
 window-padding-y = 20
 
-# Split border color matching Gruvbox Dark palette
 split-divider-color = #3c3836
 unfocused-split-opacity = 0.95
 
@@ -38,5 +42,4 @@ cursor-style-blink = false
 shell-integration = zsh
 macos-option-as-alt = true
 
-# Custom Shader
 custom-shader = ~/.config/ghostty/shaders/cursor.glsl
