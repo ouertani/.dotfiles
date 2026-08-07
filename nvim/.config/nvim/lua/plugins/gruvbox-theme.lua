@@ -1,21 +1,17 @@
 return {
-  -- Add gruvbox-material
-  {
-    "sainnhe/gruvbox-material",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.g.gruvbox_material_enable_italic = true
-      vim.g.gruvbox_material_background = "medium"
-      vim.cmd.colorscheme("gruvbox-material dark")
-    end,
-  },
+  "sainnhe/gruvbox-material",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    -- Enable italicized comments and keywords (1 = enabled)
+    vim.g.gruvbox_material_enable_italic = 1
+    vim.g.gruvbox_material_enable_bold = 1
 
-  -- Tell LazyVim to use gruvbox-material as default colorscheme
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "gruvbox-material",
-    },
-  },
+    -- Background contrast options: "hard", "medium", or "soft"
+    vim.g.gruvbox_material_background = "medium"
+    vim.g.gruvbox_material_foreground = "material"
+
+    -- Apply the colorscheme
+    vim.cmd.colorscheme("gruvbox-material")
+  end,
 }
