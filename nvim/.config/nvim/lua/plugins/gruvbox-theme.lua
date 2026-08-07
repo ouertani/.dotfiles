@@ -8,7 +8,7 @@ return {
     vim.g.gruvbox_material_enable_bold = 1
 
     -- Background contrast options: "hard", "medium", or "soft"
-    vim.g.gruvbox_material_background = "medium"
+    vim.g.gruvbox_material_background = "hard"
     vim.g.gruvbox_material_foreground = "material"
 
     -- Apply the colorscheme
