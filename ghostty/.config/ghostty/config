@@ -10,7 +10,12 @@ font-family = "JetBrains Mono"
 font-size = 20
 font-style = "Medium"
 
-# Enables CoreText stem darkening so thin vertical strokes don't drop pixels
+# Explicitly map bold/italic styles to prevent synthetic slanting/smearing
+font-style-bold = "Bold"
+font-style-italic = "Medium Italic"
+font-style-bold-italic = "Bold Italic"
+
+# Keeps native JetBrains Mono vector weight without CoreText padding
 font-thicken = false
 
 # Font Features (OpenType ligatures)
@@ -18,8 +23,8 @@ font-feature = calt
 font-feature = liga
 font-feature = dlig
 
-# Grid Alignment (Matches VS Code line rhythm)
-adjust-cell-height = 10%
+# Grid Alignment (Clean vertical rhythm)
+adjust-cell-height = 12%
 adjust-cell-width = 0
 
 # ==========================================
