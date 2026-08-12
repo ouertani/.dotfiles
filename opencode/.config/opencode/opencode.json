@@ -1,5 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "~/.config/opencode/rules/rust.md",
+    "~/.config/opencode/rules/context7.md",
+    "~/.config/opencode/rules/workflow.md"
+  ],
   "lsp": true,
   "plugin": ["opencode-dir"],
   "model": "local/mlx-community--Qwen3.6-35B-A3B-8bit",
