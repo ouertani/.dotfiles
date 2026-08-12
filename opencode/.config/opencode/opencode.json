@@ -5,6 +5,12 @@
     "~/.config/opencode/rules/context7.md",
     "~/.config/opencode/rules/workflow.md"
   ],
+  "permission": {
+    "external_directory": {
+      "~/.cargo/registry/**": "allow",
+      "~/.cargo/git/checkouts/**": "allow"
+    }
+  },
   "lsp": true,
   "plugin": ["opencode-dir"],
   "model": "local/mlx-community--Qwen3.6-35B-A3B-8bit",
