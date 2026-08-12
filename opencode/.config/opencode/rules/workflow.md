@@ -1,36 +1,53 @@
 # Workflow
 
-## Before Changes
+## Understand
 
-1. Understand the user's requested outcome.
-2. Inspect the relevant files and existing implementation.
-3. Identify existing abstractions, patterns, and dependencies that should be reused.
-4. For non-trivial changes, outline the approach before editing.
-5. Do not edit unrelated files.
+1. Identify the user's requested outcome.
+2. Inspect the relevant code before proposing or making changes.
+3. Follow existing architecture, abstractions, and conventions.
+4. Use LSP for code navigation and symbol/type information.
+5. Use Context7 when current library or API documentation is needed.
 
-## During Changes
+## Plan
 
-- Prefer small, incremental changes.
-- Preserve existing behavior unless the task requires changing it.
-- Reuse existing code and project conventions.
-- Do not introduce dependencies unless necessary.
-- Do not make speculative changes.
-- If the task is ambiguous, inspect the code first; ask only when the ambiguity cannot be resolved from the repository or documentation.
+- For simple changes, proceed directly.
+- For multi-file or architectural changes, create a short implementation plan.
+- Keep the plan focused on concrete changes.
+- Do not modify code while still investigating the problem unless necessary.
 
-## After Changes
+## Implement
+
+- Make the smallest change that solves the task.
+- Reuse existing abstractions before introducing new ones.
+- Avoid speculative refactoring.
+- Do not modify unrelated files.
+- Do not introduce dependencies unless required.
+- Preserve existing behavior outside the requested change.
+
+## Validate
+
+After implementation:
 
 1. Review the diff.
 2. Check for unintended changes.
-3. Run the most relevant validation available.
-4. Fix validation failures caused by the changes.
-5. Report:
-   - what changed
-   - what was validated
-   - any remaining limitations
+3. Run the most relevant validation.
+4. If validation fails because of the change, investigate and fix it.
+5. Re-run validation after fixing.
+
+Prefer targeted validation over unnecessarily expensive repository-wide checks.
 
 ## Debugging
 
-- Reproduce the problem before changing code when practical.
-- Identify the root cause rather than masking the symptom.
-- Make the smallest fix that addresses the root cause.
-- Re-run the reproducing case after the fix.
+- Reproduce the problem when practical.
+- Identify the root cause before changing code.
+- Prefer fixing the root cause over masking symptoms.
+- After fixing, verify the original failure no longer occurs.
+
+## Completion
+
+Report:
+- what changed
+- what was validated
+- any remaining uncertainty or limitations
+
+Do not claim that something works unless it was validated or the limitation is explicitly stated.
