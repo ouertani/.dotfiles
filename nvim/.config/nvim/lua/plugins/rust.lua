@@ -8,10 +8,12 @@ return {
             cargo = {
               buildScripts = { enable = true },
               allFeatures = true,
+              targetDir = "target/rust-analyzer",
             },
-            checkOnSave = {
-              extraArgs = { "--target-dir", "target/rust-analyzer-check" },
-            },
+            checkOnSave = true,
+            -- checkOnSave = {
+            --   extraArgs = { "--target-dir", "target/rust-analyzer-check" },
+            -- },
             procMacro = { enable = true },
           },
         },
