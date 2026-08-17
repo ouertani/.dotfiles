@@ -30,3 +30,12 @@ After editing:
 2. Run relevant validation.
 3. Report what was changed and what was validated.
 
+# Context Compaction Rules
+When summarizing conversation context or compacting history:
+- **DROP ALL:** Command outputs, `cargo check` stderr dumps, stack traces, and raw search tool outputs.
+- **KEEP ONLY:** 
+  1. The original goal/task list and current step status.
+  2. Modified file paths and their exact updated functions/structs.
+  3. Key technical decisions or discovered API requirements (e.g., specific Rust types or imports).
+- Summarize findings into concise, bulleted markdown without verbatim log quotes.
+

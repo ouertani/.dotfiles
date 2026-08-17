@@ -8,11 +8,12 @@
   "permission": {
     "external_directory": {
       "~/.cargo/registry/**": "allow",
-      "~/.cargo/git/checkouts/**": "allow"
+      "~/.cargo/git/checkouts/**": "allow",
+      "/tmp/**": "allow",
     }
   },
   "lsp": true,
-  "plugin": ["opencode-dir"],
+  "plugin": ["opencode-dir","opencode-auto-continue"],
   "model": "local/mlx-community--Qwen3.6-35B-A3B-8bit",
   "provider": {
     "local": {
@@ -27,6 +28,13 @@
       "models": {
         "mlx-community--Qwen3.6-35B-A3B-8bit": {
           "name": "Qwen3.6 35B A3B 8-bit (MLX Community)",
+          "limit": {
+            "context": 65536,
+            "output": 16384
+          }
+        },
+        "Qwen3.8-27B-8bit": {
+          "name": "Qwen3.8-27B-8bit",
           "limit": {
             "context": 65536,
             "output": 16384
