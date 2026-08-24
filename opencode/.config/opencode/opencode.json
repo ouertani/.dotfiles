@@ -9,22 +9,20 @@
     "external_directory": {
       "~/.cargo/registry/**": "allow",
       "~/.cargo/git/checkouts/**": "allow",
-      "/tmp/**": "allow",
+      "/tmp/**": "allow"
     }
   },
   "lsp": true,
-  "plugin": ["opencode-dir","opencode-auto-continue"],
+  "plugin": ["opencode-dir", "opencode-auto-continue"],
   "model": "local/mlx-community--Qwen3.6-35B-A3B-8bit",
   "provider": {
     "local": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "OMLX (local)",
-
       "options": {
         "baseURL": "http://localhost:8000/v1",
         "apiKey": "slim"
       },
-
       "models": {
         "mlx-community--Qwen3.6-35B-A3B-8bit": {
           "name": "Qwen3.6 35B A3B 8-bit (MLX Community)",
@@ -50,6 +48,23 @@
       "enabled": true,
       "headers": {
         "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      }
+    },
+    "mycorr": {
+      "type": "remote",
+      "url": "https://space.mycorr.app/mcp",
+      "headers": {
+        "MYCORR_API_TOKEN": "{env:MYCORR_API_TOKEN}"
+      }
+    },
+    "jira": {
+      "type": "local",
+      "enabled": true,
+      "command": ["npx", "-y", "@crypto512/jicon-mcp"],
+      "environment": {
+        "JIRA_URL": "{env:JIRA_URL}",
+        "JIRA_USERNAME": "{env:JIRA_EMAIL}",
+        "JIRA_API_TOKEN": "{env:JIRA_API_TOKEN}"
       }
     }
   }
