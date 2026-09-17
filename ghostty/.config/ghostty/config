@@ -48,3 +48,11 @@ shell-integration = zsh
 macos-option-as-alt = true
 
 custom-shader = ~/.config/ghostty/shaders/cursor.glsl
+
+
+keybind = global:f1=toggle_quick_terminal
+quick-terminal-position = right
+quick-terminal-size = 25%
+quick-terminal-animation-duration = 0
+theme = 0x96f
+window-save-state = never
