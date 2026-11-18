@@ -107,9 +107,9 @@ return {
   -- ==========================================
   {
     "sainnhe/gruvbox-material",
-    lazy = false,
+    lazy = true,
     priority = 1000,
-    config = function()
+    init = function()
       -- Force dark background mode for Gruvbox
       vim.o.background = "dark"
 
@@ -125,15 +125,32 @@ return {
         grey1 = { "#928374", "245" },
         fg0 = { "#fbf1c7", "229" },
       }
+    end,
+    config = function()
+      -- Apply custom highlight overrides to make selection clear
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        group = vim.api.nvim_create_augroup("GruvboxSelectionFix", { clear = true }),
+        pattern = "gruvbox-material",
+        callback = function()
+          -- Clear visible background for selected lines, visual selections, and popups
+          vim.api.nvim_set_hl(0, "CursorLine", { bg = "#3c3836", bold = true })
+          vim.api.nvim_set_hl(0, "Visual", { bg = "#504945", fg = "#fbf1c7" })
+          vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#504945", fg = "#fbf1c7", bold = true })
+
+          -- Fix Lazygit floating window selection lines inside Neovim buffers
+          vim.api.nvim_set_hl(0, "SnacksPickerSelected", { bg = "#504945", fg = "#fbf1c7", bold = true })
+          vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = "#3c3836", bold = true })
+        end,
+      })
 
       -- Explicitly apply colorscheme
-      vim.cmd.colorscheme("gruvbox-material")
+      -- vim.cmd.colorscheme("gruvbox-material")
     end,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "catppuccin-latte",
     },
   },
 }

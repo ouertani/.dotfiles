@@ -16,8 +16,8 @@
         "first" : {
           "command" : true,
           "control" : false,
-          "key" : "h",
-          "keyCode" : 4,
+          "key" : "j",
+          "keyCode" : 38,
           "option" : false,
           "shift" : false
         }
@@ -60,5 +60,8 @@
         }
       }
     }
+  },
+  "app": {
+    "accentColor": "cmux"
   }
 }

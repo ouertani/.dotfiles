@@ -1,13 +1,14 @@
 # ==========================================
 # Theme & Color Setup
 # ==========================================
-theme = Gruvbox Dark
+# theme = Gruvbox Dark
+theme = Catppuccin Latte
 
 # ==========================================
 # Font & Sharpness (1440p Calibration)
 # ==========================================
 font-family = "JetBrains Mono"
-font-size = 20
+font-size = 16
 font-style = "Medium"
 
 # Explicitly map bold/italic styles to prevent synthetic slanting/smearing
